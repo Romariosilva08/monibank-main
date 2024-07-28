@@ -16,11 +16,13 @@ botaoIniciarCamera.addEventListener("click", async function () {
     video.srcObject = iniciarVideo
 })
 
-botaoTirarFoto.addEventListener("click", function() {
+botaoTirarFoto.addEventListener('click', function () {
     canvas.getContext('2d').drawImage(video, 0, 0, canvas.width, canvas.height);
-    imagemURL = canvas.toDataURL("image/jpeg")
-    campoCamera.style.display = 'none'
-    mensagem.style.display = 'block'
+
+    imagemURL = canvas.toDataURL('image/jpeg')
+
+    campoCamera.style.display = "none"
+    mensagem.style.display = "block"
 })
 
 botaoEnviarFoto.addEventListener("click", () => {
